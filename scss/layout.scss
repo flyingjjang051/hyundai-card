@@ -38,6 +38,12 @@ a {
   }
 }
 #gnb {
+  &:after {
+    // @include pseudo;
+    // @include box(100%, 500px, #f00);
+    // left: 0;
+    // top: 80px;
+  }
   .list {
     display: flex;
     > li {
@@ -62,10 +68,13 @@ a {
         background-color: #fff;
         display: none;
         padding-top: 50px;
-        .depth02 {
-          display: flex;
+        .depth02Box {
           width: 1280px;
           margin: auto;
+        }
+        .depth02 {
+          display: flex;
+          width: 75%;
           flex-wrap: wrap;
           > li {
             flex-basis: 25%;
@@ -88,6 +97,47 @@ a {
           }
         }
       }
+    }
+  }
+  .loginBox {
+    position: absolute;
+    width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    display: flex;
+    justify-content: flex-end;
+    //border: 1px solid #f00;
+    pointer-events: none;
+    display: none;
+    .inner {
+      pointer-events: auto;
+      text-align: center;
+      padding-top: 50px;
+      .depth01 {
+        font-weight: 500;
+        padding: 10px 0;
+        text-align: left;
+        margin-bottom: 50px;
+      }
+      p {
+        line-height: 1.5;
+        font-weight: 500;
+      }
+      button {
+        background: none;
+        padding: 10px 20px;
+        background-color: #ccc;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        margin-top: 30px;
+      }
+    }
+  }
+  &.on {
+    .loginBox {
+      display: flex;
     }
   }
 }

@@ -1,0 +1,45 @@
+.clearFix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.list {
+  //display: flex;
+  //overflow: hidden;
+  li {
+    float: left;
+    height: 200px;
+    padding: 0 50px;
+  }
+}
+.box {
+  //clear: both;
+  background: #f00;
+  height: 300px;
+  width: 500px;
+}
+.txtBox {
+  width: 1200px;
+  img {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  p {
+    //float: left;
+    width: 800px;
+    text-align: justify;
+  }
+  p:first-letter {
+    font-size: 100px;
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+  }
+}
